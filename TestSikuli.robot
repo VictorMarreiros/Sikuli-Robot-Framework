@@ -10,19 +10,29 @@ Library         SikuliLibrary
 ${IMAGE_DIR}        ${CURDIR}\\img
 
 *** Test Cases ***
-Windows Sublime Hello World
+Windows Brackets Hello World
     Abre o menu inicial do Windows
-    Abre o Sublime
+    Abre o Brackets
     Digita "Hello World"
-    Fecha o Sublime
+    Fecha o Brackets
 
 *** Keywords ***
 Carrega diretório de imagens
+    Add Image Path      ${IMAGE_DIR}
+
 
 Abre o menu inicial do Windows
+    Click   windows_start_menu.png
 
-Abre o Sublime
+
+Abre o Brackets
+    Click   brackets.png
+
 
 Digita "Hello World"
+    Input Text      brackets_workspace.png       ${TEXTO}
+    Screen Should Contain       helloword.png
 
-Fecha o Sublime
+
+Fecha o Brackets
+    Click      close.png
