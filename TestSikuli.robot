@@ -10,3 +10,19 @@ Library         SikuliLibrary
 ${IMAGE_DIR}        ${CURDIR}\\img
 
 *** Test Cases ***
+Windows Sublime Hello World
+    Abre o menu inicial do Windows
+    Abre o Sublime
+    Digita "Hello World"
+    Fecha o Sublime
+
+*** Keywords ***
+Carrega diretório de imagens
+
+Abre o menu inicial do Windows
+
+Abre o Sublime
+
+Digita "Hello World"
+
+Fecha o Sublime
